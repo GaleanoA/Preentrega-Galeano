@@ -44,17 +44,8 @@ h5{
      }
  }
 
-
-.footer-gral{
-    display: flex;
-    flex-direction: column;
-}
-
-
-@media screen and (min-width: 768px){
-    .footer-gral{
-        flex-direction: row;
-    }
+footer{
+    background-color: #292929;
 }
 
 

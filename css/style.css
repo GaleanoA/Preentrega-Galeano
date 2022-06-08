@@ -28,13 +28,8 @@ h5 {
   .container-fluid .terminos {
     padding-left: 150px; }
 
-.footer-gral {
-  display: flex;
-  flex-direction: column; }
-
-@media screen and (min-width: 768px) {
-  .footer-gral {
-    flex-direction: row; } }
+footer {
+  background-color: #292929; }
 
 .peliculas1 {
   display: flex;
@@ -61,20 +56,40 @@ h5 {
   margin: 0 auto;
   padding: 3px;
   display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-areas: "header1 header1" "img-prin img-prin" "main main" "footer footer"; }
+  grid-template-areas: "header" "img-prin" "h1-estr" "main" "footer"; }
   .body-grid .img-prin {
     grid-area: img-prin;
     height: 65vh;
-    background-image: url(../img/moonfall.jpg); }
-  .body-grid .header-estr {
-    grid-area: header1; }
-  .body-grid .estrenos-m {
+    background-image: url(../img/moonfall.jpg);
+    background-position: center; }
+  .body-grid .h1-estr {
+    grid-area: h1-estr;
+    display: flex;
+    justify-content: center; }
+  .body-grid header {
+    grid-area: header; }
+  .body-grid main {
     grid-area: main;
-    background-color: #000000; }
-  .body-grid .footer-estr {
+    background-color: #000000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; }
+  .body-grid .estrenos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 5px; }
+  .body-grid footer {
     grid-area: footer;
-    background-color: #000000; }
+    background-color: #000000;
+    margin-top: 200px; }
+  .body-grid .estrenos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; }
+    .body-grid .estrenos img {
+      width: 280px;
+      height: 100%; }
 
 .img, .estrenos .la-abuela img, .estrenos .red img {
   color: #ffffff;
@@ -236,6 +251,14 @@ h5 {
     font-size: 16px; }
   .form-contacto .enviar input:hover {
     background-color: lightslategray; }
+
+.footer-gral {
+  display: flex;
+  flex-direction: column; }
+
+@media screen and (min-width: 768px) {
+  .footer-gral {
+    flex-direction: wrap; } }
 
 .main-sesion {
   display: flex;
